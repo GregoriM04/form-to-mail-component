@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Form to Email</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="main-title">Let's get in touch</h1>
+      <form action="" class="form" id="form">
+        <input
+          type="hidden"
+          name="access_key"
+          value="979f3ae1-3e55-4cca-9f7c-dea42c13ad08"
+        />
+        <div class="input-group">
+          <label class="labels">
+            <input required class="inputs" name="name" />
+            <span class="input-label">Your name</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <label class="labels">
+            <input required class="inputs" name="email" />
+            <span class="input-label">Your email address</span>
+          </label>
+        </div>
+        <div class="input-group">
+          <label class="labels">
+            <input required class="inputs" name="inquiry" />
+            <span class="input-label">Your inquiry</span>
+          </label>
+        </div>
+        <div class="textarea-group">
+          <textarea
+            id="textarea"
+            type="text"
+            class="textarea"
+            name="message"
+            data-val=""
+            onkeyup="(()=>{this.dataset.val=this.value})()"
+            required
+          ></textarea>
+          <label for="textarea" class="labels label-textarea">
+            Your message
+          </label>
+        </div>
+        <div class="h-captcha" data-captcha="true"></div>
+        <button type="submit" class="submit-btn">Send message</button>
+
+        <div id="result"></div>
+      </form>
+    </main>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
